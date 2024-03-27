@@ -76,7 +76,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--white);
-  font-family: "InterLight"; }
+  font-family: "InterMedium"; }
 
 h1 {
   font-size: 3.2rem;
@@ -127,43 +127,53 @@ h6 {
   color: var(--special);
   text-decoration: none; }
 
+.button__container {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.6rem; }
+
 .btn {
-  background-color: var(--bg-color);
+  background-color: #353535;
   color: var(--white);
   display: inline-block;
-  padding: 0.8em 1.6rem;
+  font-family: "InterMedium";
+  font-size: 1.4rem;
+  line-height: 1 !important;
+  letter-spacing: 0.1rem;
+  padding: 0.8em 0.9rem;
   text-decoration: none;
   border-radius: 0.7rem;
   transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   -webkit-tap-highlight-color: transparent !important;
   outline: none !important; }
-  .btn:not(:last-child) {
-    margin-right: 1.4rem; }
   .btn:hover {
     background-color: var(--special);
     color: var(--bg-color);
     box-shadow: 0 5px 15px rgba(120, 255, 214, 0.4); }
 
+.card__container {
+  margin-top: 3rem; }
+
 .card {
   background-color: var(--card);
-  padding: 2.2rem;
-  border: 0.2rem solid var(--card-border);
-  border-radius: 1rem; }
-  .card:not(:last-child) {
-    margin-bottom: 2.4rem; }
+  padding: 1.6rem;
+  border: 0.1rem solid var(--card-border);
+  border-radius: 1rem;
+  margin-bottom: 1.6rem; }
   .card span {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
-    color: var(--special);
-    margin-bottom: 0.55rem; }
+    color: var(--special); }
   .card h4 {
-    font-size: 1.8rem; }
+    font-family: "InterMedium";
+    font-size: 1.6rem !important;
+    font-weight: 500 !important;
+    line-height: 1.3;
+    margin: 0.2rem 0 0.8rem 0rem; }
   .card p {
     font-size: 1.4rem;
-    margin: 0rem 0rem 3rem 0rem; }
-  .card__container {
-    margin-top: 3rem; }
+    line-height: 1.5; }
 
 .footer {
   padding: 2.2rem 0rem; }
@@ -211,7 +221,7 @@ h6 {
   border-radius: 10rem; }
 
 .hero {
-  height: 75vh; }
+  height: 70vh; }
   .hero .wrapper {
     height: 100%;
     justify-content: center;
@@ -226,7 +236,7 @@ h6 {
 
 .skills li {
   list-style: none;
-  font-weight: bold; }
+  font-family: "InterBold"; }
 
 .work ul {
   margin: 3rem 0rem; }
@@ -241,3 +251,15 @@ h6 {
       display: flex;
       justify-content: center;
       align-items: center; }
+
+.contact {
+  text-align: center;
+  padding: 4rem 0rem 8rem 0rem !important; }
+  .contact h2 {
+    margin-bottom: 3rem; }
+  .contact p {
+    margin-bottom: 2rem; }
+  .contact .btn {
+    width: max-content;
+    margin: 0rem auto !important;
+    padding: 1.6rem 3.2rem !important; }

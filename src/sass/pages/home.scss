@@ -1,5 +1,5 @@
 .hero {
-  height: 75vh;
+  height: 70vh;
 
   & .wrapper {
     height: 100%;
@@ -19,7 +19,7 @@
 
   & li {
     list-style: none;
-    font-weight: bold;
+    font-family: "InterBold";
   }
 }
 
@@ -45,5 +45,23 @@
         //margin-right: 1.2rem;
       }
     }
+  }
+}
+
+.contact {
+  text-align: center;
+  padding: 4rem 0rem 8rem 0rem !important;
+  & h2 {
+    margin-bottom: 3rem;
+  }
+
+  & p {
+    margin-bottom: 2rem;
+  }
+
+  & .btn {
+    width: max-content;
+    margin: 0rem auto !important;
+    padding: 1.6rem 3.2rem !important;
   }
 }

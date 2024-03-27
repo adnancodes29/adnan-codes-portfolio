@@ -1,31 +1,31 @@
+.card__container {
+  margin-top: 3rem;
+}
+
 .card {
   background-color: var(--card);
-  padding: 2.2rem;
-  border: 0.2rem solid var(--card-border);
+  padding: 1.6rem;
+  border: 0.1rem solid var(--card-border);
   border-radius: 1rem;
-
-  &:not(:last-child) {
-    margin-bottom: 2.4rem;
-  }
+  margin-bottom: 1.6rem;
 
   & span {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: 400;
     color: var(--special);
-    margin-bottom: 0.55rem;
   }
 
   & h4 {
-    font-size: 1.8rem;
+    font-family: "InterMedium";
+    font-size: 1.6rem !important;
+    font-weight: 500 !important;
+    line-height: 1.3;
+    margin: 0.2rem 0 0.8rem 0rem;
   }
 
   & p {
     font-size: 1.4rem;
-    margin: 0rem 0rem 3rem 0rem;
-  }
-
-  &__container {
-    margin-top: 3rem;
+    line-height: 1.5;
   }
 }

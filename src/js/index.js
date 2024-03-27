@@ -36,8 +36,10 @@ projects.forEach((project) => {
   <span>${project.year}</span>
   <h4>${project.name}</h4>
   <p>${project.description}</p>
+  <div class="button__container">
   <a href="${project.url}" target="_blank" class="btn">Demo</a>
-  <a href="${project.git}" target="_blank" class="btn">Code</a>`;
+  <a href="${project.git}" target="_blank" class="btn">Code</a>
+  </div>`;
 
   projectWrapper.insertAdjacentElement("beforeend", el);
 });
@@ -64,3 +66,5 @@ document.addEventListener("scroll", () => {
     nav.classList.remove("active");
   }
 });
+
+console.log("bb");
