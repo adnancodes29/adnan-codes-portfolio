@@ -1,0 +1,13 @@
+.header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  padding-top: 1.6rem;
+
+  & .wrapper {
+    justify-content: center;
+    align-items: center;
+    padding: 0rem !important;
+  }
+}

@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "InterLight";
+  src: url(../fonts/Inter-Light.woff2) format("woff2");
+  font-weight: 300;
+  font-size: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "InterRegular";
+  src: url(../fonts/Inter-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-size: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "InterMedium";
+  src: url(../fonts/Inter-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-size: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "InterBold";
+  src: url(../fonts/Inter-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-size: normal;
+  font-display: swap;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--text-color);
+  font-family: "InterRegular";
+  //font-family: sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.8;
+}
+
+.nav {
+  &--link {
+    font-size: 1.4rem;
+  }
+}
+
+@function headings($from: 1, $to: 6) {
+  @if $from == $to {
+    @return "h#{$from}";
+  } @else {
+    @return "h#{$from}," + headings($from + 1, $to);
+  }
+}
+
+// Then call it with the rules/styles you want wherever you want (As long as the file/include has access to the above function of course).
+#{headings(1,6)} {
+  color: var(--white);
+  font-family: "InterLight";
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.4;
+}
+
+h2 {
+  font-size: 2.8rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 2.4rem;
+  line-height: 1.6;
+}
+
+h4 {
+  font-size: 2rem;
+  line-height: 1.7;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+h6 {
+  font-size: 1.6rem;
+  line-height: 1.9;
+}
+
+.hero {
+  text-align: center;
+
+  & h1 {
+    & span {
+      display: inline-block;
+      color: var(--special);
+    }
+  }
+
+  & p {
+    margin-top: 2rem;
+  }
+}
+
+.about {
+  & p {
+    margin-top: 1.8rem;
+  }
+}
+
+.workplace {
+  font-size: 1.6rem;
+  color: var(--white);
+  line-height: 1;
+  margin: 2rem 0rem 0rem 0rem;
+}
+
+.copy {
+  font-size: 1.4rem;
+}
+
+.link {
+  display: inline-block;
+  color: var(--special);
+  text-decoration: none;
+}

@@ -1,0 +1,8 @@
+/* Media Queries */ 
+
+smartphone - max 767px wrapper 95%
+tablet - min 768 max 1023
+desktop - min 1024
+
+body font size for desktop 16 - 18px
+mobile font size for desktop 14 - 16px

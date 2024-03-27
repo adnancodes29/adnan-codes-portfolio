@@ -1,0 +1,26 @@
+.footer {
+  padding: 2.2rem 0rem;
+
+  & .wrapper {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  & ul {
+    display: flex;
+  }
+
+  & li {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: 1.2rem;
+    }
+  }
+
+  & svg {
+    height: 1.8rem !important;
+    width: 1.8rem !important;
+  }
+}

@@ -1,0 +1,42 @@
+:root {
+  --bg-color: #181818;
+  --white: #fff;
+  --text-color: #bbb;
+  /*--special: #44a08d;*/
+  --special: #78ffd6;
+  --card: #222;
+  --card-border: #353535;
+}
+
+::selection {
+  background-color: var(--special);
+  color: var(--bg-color);
+  padding: 1.6rem 3.2rem;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-color);
+  position: relative;
+}
+
+.wrapper {
+  width: 95%;
+  margin: 0% auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0rem 2.5rem;
+}
+
+section {
+  padding: 4rem 0rem;
+}
