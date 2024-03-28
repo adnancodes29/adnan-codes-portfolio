@@ -1,23 +1,22 @@
-.button__container {
-  display: flex;
-  gap: 0.8rem;
-  margin-top: 1.6rem;
-}
-
 .btn {
   background-color: #353535;
   color: var(--white);
   display: inline-block;
-  font-family: "InterMedium";
+  font-family: "InterRegular";
   font-size: 1.4rem;
   line-height: 1 !important;
-  letter-spacing: 0.1rem;
   padding: 0.8em 0.9rem;
   text-decoration: none;
   border-radius: 0.7rem;
   transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
   -webkit-tap-highlight-color: transparent !important;
   outline: none !important;
+
+  @media screen and(min-width: 768px) {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    padding: 1rem 1.6rem;
+  }
 
   &:hover {
     background-color: var(--special);

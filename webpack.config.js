@@ -6,7 +6,7 @@ const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const FaviconsWebpackPlugin = require("favicons-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
 
   entry: {
     main: path.resolve(__dirname, "src/js/index.js"),
@@ -39,8 +39,8 @@ module.exports = {
   },
 
   optimization: {
-    minimizer: [new TerserJSPlugin({}), new CssMinimizerPlugin()],
     minimize: true,
+    minimizer: [new TerserJSPlugin({}), new CssMinimizerPlugin()],
   },
 
   devtool: "inline-source-map",
@@ -59,65 +59,82 @@ module.exports = {
   plugins: [
     new MiniCssExtractPlugin(),
 
-    /*new FaviconsWebpackPlugin({
-            logo: '',
-            mode: 'webapp',
-            manifest: ''
-        }),*/
+    new FaviconsWebpackPlugin({
+      logo: "./src/images/favicon.png",
+      mode: "webapp",
+      manifest: "./src/manifest.json",
+    }),
 
     new HtmlWebpackPlugin({
-      title: "Adnan Musinovic | Portfolio",
+      title: "Adnan Mušinović | Portfolio",
       filename: "index.html",
       template: path.resolve(__dirname, "src/index.html"),
       scriptLoading: "defer",
       meta: {
         author: {
           name: "author",
-          content: "Adnan Musinovic",
+          content: "Adnan Mušinović",
         },
         description: {
           name: "description",
-          content: "",
+          content:
+            "Frontend Developer specializing in building (and occasionally designing) exceptional digital experiences.",
         },
         keyword: {
           name: "keywords",
-          content: "",
+          content: "Adnan Mušinović, AdnanCodes, Frontend Developer",
         },
-        "og:title": {
-          property: "og:title",
-          content: "",
-        },
-        "og:description": {
-          property: "og:description",
-          content: "",
+
+        //Facebook Meta Tags
+        "og:url": {
+          property: "og:url",
+          content: "https://adnancodes.000webhostapp.com",
         },
         "og:type": {
           property: "og:type",
           content: "website",
         },
-        "og:url": {
-          property: "og:url",
-          content: "",
+        "og:title": {
+          property: "og:title",
+          content: "Adnan Mušinović | Portfolio",
+        },
+        "og:description": {
+          property: "og:description",
+          content:
+            "Frontend Developer specializing in building (and occasionally designing) exceptional digital experiences.",
         },
         "og:image": {
           property: "og:image",
-          content: "",
+          content:
+            "https://adnancodes.000webhostapp/share.e990637530882931e0a3..jpg",
         },
+        //Facebook Meta Tags
         "twitter:card": {
           name: "twitter:card",
           content: "summary_large_image",
         },
+        "twitter:domain": {
+          property: "twitter:domain",
+          content: "adnancodes.000webhostapp.com",
+        },
+        "twitter:url": {
+          property: "twitter:url",
+          content:
+            "https://adnancodes.000webhostapp.com/share.e990637530882931e0a3..jpg",
+        },
         "twitter:title": {
           name: "twitter:title",
-          content: "",
+          content: "Adnan Mušinović | Portfolio",
         },
         "twitter:description": {
           name: "twitter:description",
-          content: "",
+          content:
+            "Frontend Developer specializing in building (and occasionally designing) exceptional digital experiences.",
         },
         "twitter:image": {
           name: "twitter:image",
-          content: "",
+          content:
+            "https://adnancodes.000webhostapp.com/share.e990637530882931e0a3..jpg",
         },
         meta: {
           name: "theme-color",

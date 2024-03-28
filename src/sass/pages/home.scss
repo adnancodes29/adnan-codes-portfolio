@@ -14,7 +14,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.4rem;
-    margin-top: 1.8rem;
   }
 
   & li {
@@ -26,7 +25,11 @@
 .work {
   & ul {
     margin: 3rem 0rem;
-    //padding-left: 1rem;
+
+    @media screen and(min-width: 1024px) {
+      margin: 5rem 0;
+      padding: 0rem 9rem 0rem 2rem;
+    }
 
     & li {
       list-style: none;
@@ -34,6 +37,10 @@
 
       &:not(:last-child) {
         margin-bottom: 2.4rem;
+
+        @media screen and(min-width: 1024px) {
+          margin-bottom: 3.2rem;
+        }
       }
 
       & .svg__container {
@@ -43,20 +50,35 @@
         justify-content: center;
         align-items: center;
         //margin-right: 1.2rem;
+
+        @media screen and(min-width: 1024px) {
+          margin-right: 1.2rem;
+        }
       }
     }
   }
 }
 
 .contact {
-  text-align: center;
   padding: 4rem 0rem 8rem 0rem !important;
-  & h2 {
-    margin-bottom: 3rem;
+
+  @media only screen and(min-width: 768px) {
+    padding: 6rem 0rem 14rem 0rem !important;
+  }
+
+  @media only screen and(min-width: 1024px) {
+    padding: 8rem 0rem 20rem 0rem !important;
+  }
+
+  & .wrapper {
+    justify-content: center;
+    align-items: center;
   }
 
   & p {
-    margin-bottom: 2rem;
+    margin-bottom: 3.2rem;
+    max-width: 70rem;
+    text-align: center;
   }
 
   & .btn {
