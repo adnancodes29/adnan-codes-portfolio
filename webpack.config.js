@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 const TerserJSPlugin = require("terser-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -88,7 +89,7 @@ module.exports = {
         //Facebook Meta Tags
         "og:url": {
           property: "og:url",
-          content: "https://adnancodes.000webhostapp.com",
+          content: "https://adnancodes.000webhostapp.com/",
         },
         "og:type": {
           property: "og:type",
@@ -106,7 +107,7 @@ module.exports = {
         "og:image": {
           property: "og:image",
           content:
-            "https://adnancodes.000webhostapp/share.e990637530882931e0a3..jpg",
+            "https://adnancodes.000webhostapp/dist/share.e990637530882931e0a3..jpg",
         },
         //Facebook Meta Tags
         "twitter:card": {
@@ -119,8 +120,7 @@ module.exports = {
         },
         "twitter:url": {
           property: "twitter:url",
-          content:
-            "https://adnancodes.000webhostapp.com/share.e990637530882931e0a3..jpg",
+          content: "https://adnancodes.000webhostapp.com/",
         },
         "twitter:title": {
           name: "twitter:title",
@@ -134,12 +134,21 @@ module.exports = {
         "twitter:image": {
           name: "twitter:image",
           content:
-            "https://adnancodes.000webhostapp.com/share.e990637530882931e0a3..jpg",
+            "https://adnancodes.000webhostapp.com/dist/share.e990637530882931e0a3..jpg",
         },
         meta: {
           name: "theme-color",
           content: "#181818",
         },
+      },
+    }),
+
+    new HtmlWebpackPartialsPlugin({
+      path: "./src/partials/analytics.html",
+      location: "head",
+      priority: "high",
+      options: {
+        ga_property_id: "G-K0T0DRBS7S",
       },
     }),
   ],
