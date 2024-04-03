@@ -1,0 +1,13 @@
+.not-found {
+  background-color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  & .btn {
+    margin: 2.2rem auto 0rem auto;
+    padding: 1.6rem 3.2em;
+  }
+}

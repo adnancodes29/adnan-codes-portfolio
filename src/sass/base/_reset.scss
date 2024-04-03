@@ -1,23 +1,13 @@
-:root {
-  --bg-color: #181818;
-  --white: #fff;
-  --text-color: #bbb;
-  /*--special: #44a08d;*/
-  --special: #78ffd6;
-  --card: #222;
-  --card-border: #353535;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
 
 ::selection {
   background-color: var(--special);
   color: var(--bg-color);
   padding: 1.6rem 3.2rem;
-}
-
-* {
-  margin: 0%;
-  padding: 0%;
-  box-sizing: border-box;
 }
 
 html {

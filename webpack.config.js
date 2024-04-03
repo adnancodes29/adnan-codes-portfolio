@@ -107,20 +107,16 @@ module.exports = {
         "og:image": {
           property: "og:image",
           content:
-            "https://adnancodes.000webhostapp/dist/share.e990637530882931e0a3..jpg",
+            "https://adnancodes.000webhostapp.com/share-image.0b22768129567546cc02..jpg",
         },
-        //Facebook Meta Tags
+        //Twitter Meta Tags
         "twitter:card": {
           name: "twitter:card",
           content: "summary_large_image",
         },
-        "twitter:domain": {
-          property: "twitter:domain",
-          content: "adnancodes.000webhostapp.com",
-        },
-        "twitter:url": {
-          property: "twitter:url",
-          content: "https://adnancodes.000webhostapp.com/",
+        "twitter:site": {
+          name: "twitter:site",
+          content: "@adnan_codes",
         },
         "twitter:title": {
           name: "twitter:title",
@@ -134,7 +130,7 @@ module.exports = {
         "twitter:image": {
           name: "twitter:image",
           content:
-            "https://adnancodes.000webhostapp.com/dist/share.e990637530882931e0a3..jpg",
+            "https://adnancodes.000webhostapp.com/share-image.0b22768129567546cc02..jpg",
         },
         meta: {
           name: "theme-color",
@@ -143,10 +139,21 @@ module.exports = {
       },
     }),
 
+    new HtmlWebpackPlugin({
+      title: "Page not found | Adnan Musinovic",
+      filename: "not-found.html",
+      template: path.resolve(__dirname, "src/not-found.html"),
+      scriptLoading: "defer",
+      meta: {
+        name: "theme-color",
+        content: "#181818",
+      },
+    }),
+
     new HtmlWebpackPartialsPlugin({
       path: "./src/partials/analytics.html",
       location: "head",
-      priority: "high",
+      priority: "low",
       options: {
         ga_property_id: "G-K0T0DRBS7S",
       },

@@ -2,20 +2,19 @@
   --bg-color: #181818;
   --white: #fff;
   --text-color: #bbb;
-  /*--special: #44a08d;*/
   --special: #78ffd6;
   --card: #222;
   --card-border: #353535; }
-
-::selection {
-  background-color: var(--special);
-  color: var(--bg-color);
-  padding: 1.6rem 3.2rem; }
 
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box; }
+
+::selection {
+  background-color: var(--special);
+  color: var(--bg-color);
+  padding: 1.6rem 3.2rem; }
 
 html {
   scroll-behavior: smooth; }
@@ -411,3 +410,14 @@ h6 {
     width: max-content;
     margin: 0rem auto !important;
     padding: 1.6rem 3.2rem !important; }
+
+.not-found {
+  background-color: var(--bg-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .not-found .btn {
+    margin: 2.2rem auto 0rem auto;
+    padding: 1.6rem 3.2em; }
